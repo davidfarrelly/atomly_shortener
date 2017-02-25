@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/? index.php?title=$1 [L,QSA]
+RewriteRule !\.(?:jpe?g|gif|bmp|png|tiff|css)$ index.php?title=$1 [L,QSA]
